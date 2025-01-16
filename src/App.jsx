@@ -21,7 +21,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          Quanto os coco a Gabi faz {count}
+          Count {count}
         </button>
         <p>
           Edite <code>src/App.jsx</code> e salve para recarregar.
