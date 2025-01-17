@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import './index.css'
+import './style.css'
 
 const CampoTexto = (props) => {
   return (

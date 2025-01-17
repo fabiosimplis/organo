@@ -1,4 +1,4 @@
-import "./index.css";
+import "./style.css";
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 
