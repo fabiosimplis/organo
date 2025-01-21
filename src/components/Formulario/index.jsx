@@ -4,16 +4,7 @@ import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 import { useState } from "react";
 
-const Formulario = () => {
-  const times = [
-    "Programação",
-    "Front-End",
-    "Data Science",
-    "Devops",
-    "Ux e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
+const Formulario = (props) => {
 
   // useState retorna , o valor em si, e uma função que é um setter
   const [nome, setNome] = useState("");
@@ -59,7 +50,7 @@ const Formulario = () => {
         <ListaSuspensa
           obrigatorio={true}
           label="Time"
-          itens={times}
+          itens={props.times}
           valor={time}
           aoAlterar={(valor) => setTime(valor)}
         />
