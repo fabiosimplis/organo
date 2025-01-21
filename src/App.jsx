@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Banner />
-      <Formulario aoColaboradorCadastrado={aoNovoColaboradorAdicionado(colaborador)}/>
+      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
     </>
   );
 }
