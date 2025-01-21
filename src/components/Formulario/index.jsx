@@ -23,7 +23,12 @@ const Formulario = () => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    console.log("Form foi submetido => ", nome, cargo, imagem, time);
+    preprocessCSS.aoColaboradorCadastrado({
+      nome,
+      cargo,
+      imagem,
+      time,
+    });
   };
 
   return (
@@ -51,12 +56,12 @@ const Formulario = () => {
           valor={imagem}
           aoAlterar={(valor) => setImagem(valor)}
         />
-        <ListaSuspensa 
-          obrigatorio={true} 
-          label="Time" 
-          itens={times} 
+        <ListaSuspensa
+          obrigatorio={true}
+          label="Time"
+          itens={times}
           valor={time}
-          aoAlterar={valor => setTime(valor)}
+          aoAlterar={(valor) => setTime(valor)}
         />
         <Botao>Criar Card</Botao>
       </form>
