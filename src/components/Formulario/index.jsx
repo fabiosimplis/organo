@@ -14,7 +14,7 @@ const Formulario = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    preprocessCSS.aoColaboradorCadastrado({
+    props.aoColaboradorCadastrado({
       nome,
       cargo,
       imagem,
