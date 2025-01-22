@@ -7,8 +7,8 @@ function App() {
   const times = [
     {
       nome: "Programação",
-      corPrimaria: "#D9F7E9",
-      corSecundaria: "#57C278",
+      corPrimaria: "#57C278",
+      corSecundaria: "#D9F7E9",
     },
     {
       nome: "Front-End",
@@ -44,7 +44,6 @@ function App() {
 
   const [colaboradores, setColaboradores] = useState([]);
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
     // espalha o array de colaboradores e adiciona um novo colaborador
     setColaboradores([...colaboradores, colaborador]);
   };
