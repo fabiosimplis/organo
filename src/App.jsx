@@ -8,8 +8,8 @@ function App() {
   const times = [
     {
       nome: "Programação",
-      corPrimaria: "#57C278",
-      corSecundaria: "#D9F7E9",
+      corPrimaria: "#D9F7E9",
+      corSecundaria: "#57C278",
     },
     {
       nome: "Front-End",
@@ -234,12 +234,10 @@ function App() {
           aoNovoColaboradorAdicionado(colaborador)
         }
       />
-      {times.map((time) => (
+      {times.map((time, indice) => (
         <Time
-          key={time.nome}
-          nome={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
+          key={indice}
+          time={time}
           colaboradores={colaboradores.filter(
             (colaborador) => colaborador.time === time.nome
           )}
