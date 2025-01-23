@@ -1,24 +1,37 @@
-import Colaborador from '../Colaborador';
-import './style.css'
+import Colaborador from "../Colaborador";
+import hexToRgba from "hex-to-rgba";
+import "./style.css";
 
-const Time = ({time, colaboradores, mudarCor, aoDeletar}) => {
-  const css = { backgroundColor: time.corPrimaria }
-  
+const Time = ({ time, colaboradores, mudarCor, aoDeletar }) => {
   return (
     // Podemos usar ternario também.
-    (colaboradores.length > 0) && <section className='time' style={css}>
-      <input 
-        value={ time.corSecundaria }
-        type='color' className='input-cor' 
-        onChange={evento => mudarCor(evento.target.value, time.nome)}
-      />
-      <h3 style={{borderColor: time.corSecundaria}}>{time.nome}</h3>
-      <div className='colaboradores'>
-        {colaboradores.map( (colaborador, indice) => {
-          return <Colaborador key={indice} colaborador={colaborador} corDeFundo={time.corSecundaria} aoDeletar={aoDeletar} />})}
+    colaboradores.length > 0 && (
+      <section
+        className="time"
+        style={{ backgroundImage: "url(/imagens/fundo.png)" }}
+      >
+        <input
+          value={time.cor}
+          type="color"
+          className="input-cor"
+          onChange={(evento) => mudarCor(evento.target.value, time.nome)}
+        />
+        <h3 style={{ borderColor: time.cor }}>{time.nome}</h3>
+        <div className="colaboradores">
+          {colaboradores.map((colaborador, indice) => {
+            return (
+              <Colaborador
+                key={indice}
+                colaborador={colaborador}
+                corDeFundo={time.cor}
+                aoDeletar={aoDeletar}
+              />
+            );
+          })}
         </div>
-    </section>
-  )
-}
+      </section>
+    )
+  );
+};
 
 export default Time;
