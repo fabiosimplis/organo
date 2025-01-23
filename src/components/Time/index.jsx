@@ -8,7 +8,7 @@ const Time = ({ time, colaboradores, mudarCor, aoDeletar }) => {
     colaboradores.length > 0 && (
       <section
         className="time"
-        style={{ backgroundImage: "url(/imagens/fundo.png)" }}
+        style={{ backgroundImage: "url(/imagens/fundo.png)", backgroundColor: hexToRgba(time.cor, '0.6')}}
       >
         <input
           value={time.cor}
