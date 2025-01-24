@@ -1,19 +1,19 @@
 /* eslint-disable react/prop-types */
 import "./style.css";
 
-const CampoTexto = (props) => {
+const Campo = (props) => {
   const placeholderModificada = `${props.placeholder}...`;
 
   const aoDigitar = (evento) => {
-    props.aoAlterar(evento.target.value)
+    props.aoAlterar(evento.target.value);
   };
-
+  const type = props.type || "text";
   return (
-    <div className="campo-texto">
+    <div className={`campo campo-${type}`}>
       <label>{props.label}</label>
       <input
-      value={props.valor}
-        type="text"
+        value={props.valor}
+        type={type}
         onChange={aoDigitar}
         placeholder={props.placeholder}
         required={props.obrigatorio}
@@ -22,4 +22,4 @@ const CampoTexto = (props) => {
   );
 };
 
-export default CampoTexto;
+export default Campo;
