@@ -2,7 +2,7 @@ import Colaborador from "../Colaborador";
 import hexToRgba from "hex-to-rgba";
 import "./style.css";
 
-const Time = ({ time, colaboradores, mudarCor, aoDeletar }) => {
+const Time = ({ time, colaboradores, mudarCor, aoDeletar, aoFavoritar }) => {
   return (
     // Podemos usar ternario também.
     colaboradores.length > 0 && (
@@ -28,6 +28,7 @@ const Time = ({ time, colaboradores, mudarCor, aoDeletar }) => {
                 colaborador={colaborador}
                 corDeFundo={time.cor}
                 aoDeletar={aoDeletar}
+                aoFavoritar={aoFavoritar}
               />
             );
           })}
